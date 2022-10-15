@@ -79,9 +79,11 @@
     body {
         min-height: 100%;
     }
-
-    .template {
+    .flex{
         display: flex;
+    }
+    .template {
+    
         font-size: 2rem;
         margin: 2rem;
         padding: 2rem 0rem 2rem 2rem;
@@ -107,7 +109,6 @@
         align-items: center;
         font-size: 5rem;
         margin-top: 2rem;
-        background-color: rgb(245, 245, 245, 0.6);
     }
 
     .reserva {
@@ -214,7 +215,7 @@
     .grid_container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: 15% repeat(3, 1fr) 10%;
         grid-template-areas:
             'header header header'
             'main main main'
@@ -223,6 +224,7 @@
             'footer footer footer';
         align-content: space-between;
         row-gap: 2rem;
+        height: 100vh;
     }
 
     header {
