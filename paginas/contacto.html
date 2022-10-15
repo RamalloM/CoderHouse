@@ -1,0 +1,76 @@
+<!--
+  Arreglar text input
+  corregir tamano del form
+  Incorporar GRID de ser necesario
+-->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head> 
+  <title> "Contacto" </title>
+  <!--Agregar un favicon-->
+  <meta charset="utf-8">
+  <meta name="Matias Ramallo" content="Restaurant comida italiana">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="../imagenes/gouccine-logo.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/0c9e4fcd31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="menuNav">
+      <a href="../index.html">
+        <img src="https://cdn-icons-png.flaticon.com/512/625/625065.png" alt="logo" class="menuNav__logo"></a>
+      <ul class="menuUl">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./menu.html" class="aNav">Nuestro menu</a></li>
+        <li><a href="./reserva.html" class="aNav">Reserva</a></li>
+        <li><a href="./contacto.html" class="aNav">Contacto</a></li>
+        <li><a href="./acerca-de.html" class="aNav">Acerca de</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div>
+      <div class="template contacto">
+        <h1>Contanos tu opinion</h1>
+        <form action="" method="" enctype="" class="form_reserva">
+          <div class="form_row">
+            <div class="form_colum">
+              <div class="form_item">
+                <p>Datos personales</p>
+                <input type="text" name="Nombre completo" placeholder="Nombre" />
+                <br>
+                <input type="email" placeholder="Email" />
+                <br>
+                <input type="tel" placeholder="Telefono">
+              </div>
+            </div>
+            <div class="form_colum_1">
+              <label for="contacto" class="form_item">Motivo de contacto:</label>
+              <input type="text" id="contacto" class="text_input">
+            </div>
+          </div>
+          <div class="form_button">
+            <input type="submit" value="Enviar" id="sendButton" class="sendButton">
+          </div>
+      </div>
+      </form>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <div class="redes">
+      <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+  </footer>
+</body>
+
+</html>
