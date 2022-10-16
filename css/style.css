@@ -5,9 +5,7 @@
     }
 
     html {
-        background-image: url("../imagenes/background.jpg");
-        background-size: auto;
-        background-color: white;
+        
         font-family: "Aref Ruqaa Ink", serif;
         font-size: 62.5%;
         /*font-size=62.5% iguala 1rem a 10px*/
@@ -23,7 +21,14 @@
         list-style: none;
     }
 
-
+    .background_image{
+        background-image: url("../imagenes/background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+        background-color: white;
+    }
     /* HEADER */
 
 
@@ -210,9 +215,24 @@
         font-size: 2rem;
         margin-left: 3rem;
     }
-
+    .flex_container_menu{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        ;
+    }
+    .grid_container_menu{
+        display: grid;
+        grid-template-columns: minmax(320px, 1fr);
+        grid-template-rows: 10% 1fr 5%;
+        row-gap: 2%;
+        grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    }
     /*GRID*/
-    .grid_container {
+    .grid_container1{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 15% repeat(3, 1fr) 10%;
@@ -251,4 +271,6 @@
         width: 100%;
         background-color: whitesmoke;
         opacity: 0.6;
+        bottom: 0;
+        margin-top: 4rem;
     }

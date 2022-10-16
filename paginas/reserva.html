@@ -4,10 +4,9 @@
         Modificar el Nav con grid para que el logo se vea a un costado
         Corregir "home" del logo
         aplicar al inut border shadows y border radius. Para suavizar los inputs
---> 
+-->
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es" class="background_image">
 <head>
     <title>"Reserva Gouccine"</title>
     <!--Agregar un favicon-->
@@ -15,19 +14,19 @@
     <meta name="Matias Ramallo" content="Restaurant comida italiana">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../imagenes/gouccine-logo.png" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/0c9e4fcd31.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
     <header>
         <nav class="menuNav">
             <a href="../index.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/625/625065.png" alt="Home" class="menuNav__logo">Home</a>
+                <img src="https://cdn-icons-png.flaticon.com/512/625/625065.png" alt="Home"
+                    class="menuNav__logo">Home</a>
         </nav>
     </header>
     <main>
@@ -35,23 +34,23 @@
             <h1>Haz tu reserva</h1>
             <p>Por favor completa el siguiente formulario para realizar tu reserva:</p>
 
-            <form action="" method="" enctype="" class="form_reserva">
+            <<form action="#" method="get" enctype="application/x-www-form-urlencoded" class="form_reserva">
                 <div>
                     <label for="comensales">Cantidad de comensales </label>
                     <br>
                     <select name="Cantidad de comensales" id="comensales" class="form_select">
                         <option value="#">Seleccione una opcion</option>
                         <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
-                        <option value="1">4</option>
-                        <option value="1">5</option>
-                        <option value="1">6</option>
-                        <option value="1">7</option>
-                        <option value="1">8</option>
-                        <option value="1">9</option>
-                        <option value="1">10</option>
-                        <option value="1">+ de 10</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">+ de 10</option>
                     </select>
                 </div>
                 <div class="form_row">
@@ -63,7 +62,7 @@
                         </div>
                         <div class="form_item">
                             <p>Datos personales</p>
-                            <input type="text" name="Nombre completo" placeholder="Nombre" />
+                            <input type="text" name="Nombre_completo" placeholder="Nombre" />
                             <br>
                             <input type="email" placeholder="Email" />
                             <br>
@@ -78,12 +77,18 @@
                         </div>
                         <div class="form_item">
                             <p>Personalize su experiencia:</p>
-                            <input type="radio" id="restriccionAli" value="restriccionAli" name="Indicaciones">
-                            <label for="restriccionAli">Restricciones alimentarias</label><br>
-                            <input type="radio" id="accesibilidad" name="Indicaciones" value="accesibilidad">
-                            <label for="accesibilidad">Mesa con accesibilidad</label><br>
-                            <input type="radio" id="Niños" value="Niños" name="Indicaciones">
-                            <label for="Niños">Niños</label><br>
+                            <div>
+                            <input type="radio" id="restricciones_alimentarias" name="personalizacion_experiencia" value="restricciones_alimentarias" >
+                            <label for="restricciones_alimentarias">Restricciones alimentarias</label><br>
+                            </div>
+                            <div>
+                            <input type="radio" id="mesa_con_accesibilidad" name="personalizacion_experiencia" value="mesa_con_accesibilidad">
+                            <label for="mesa_con_accesibilidad">Mesa con accesibilidad</label><br>
+                            </div>
+                            <div>
+                            <input type="radio" id="menores"  name="personalizacion_experiencia" value="menores">
+                            <label for="Menores">Menores</label><br>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -99,6 +104,7 @@
             <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/0c9e4fcd31.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
