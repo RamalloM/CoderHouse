@@ -22,6 +22,9 @@
 </head>
 
 <body>
+<div class="grid_container_menu">
+
+
     <header>
         <nav class="menuNav">
             <a href="../index.html">
@@ -29,71 +32,81 @@
                     class="menuNav__logo">Home</a>
         </nav>
     </header>
+
     <main>
         <div class="template reserva">
             <h1>Haz tu reserva</h1>
             <p>Por favor completa el siguiente formulario para realizar tu reserva:</p>
 
-            <<form action="#" method="get" enctype="application/x-www-form-urlencoded" class="form_reserva">
-                <div>
+            <form action="#" method="get" enctype="application/x-www-form-urlencoded" class="form_reserva">
+                <div class="form_colum">
                     <label for="comensales">Cantidad de comensales </label>
-                    <br>
-                    <select name="Cantidad de comensales" id="comensales" class="form_select">
-                        <option value="#">Seleccione una opcion</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">+ de 10</option>
+                    <div>
+                        <select name="Cantidad de comensales" id="comensales" class="form_select">
+                            <option value="#">Seleccione una opcion</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">+ de 10</option>
+                    </div>
                     </select>
                 </div>
                 <div class="form_row">
                     <div class="form_colum">
-                        <div class="form_item">
+                        <div>
                             <label for="fecha">Fecha</label>
-                            <br>
+                        </div>
+                        <div>
                             <input type="date" id="fecha" class="reservaDate">
                         </div>
-                        <div class="form_item">
+                        <div>
                             <p>Datos personales</p>
+                        </div>
+                        <div>
                             <input type="text" name="Nombre_completo" placeholder="Nombre" />
-                            <br>
+                        </div>
+                        <div>
                             <input type="email" placeholder="Email" />
-                            <br>
+                        </div>
+                        <div>
                             <input type="tel" placeholder="Telefono">
                         </div>
                     </div>
                     <div class="form_colum_1">
                         <div class="form_item">
                             <label for="hora">Horario de reserva</label>
-                            <br>
+                        </div>
+                        <div>
                             <input type="time" id="hora">
                         </div>
-                        <div class="form_item">
+                        <div class="form_colum">
                             <p>Personalize su experiencia:</p>
                             <div>
-                            <input type="radio" id="restricciones_alimentarias" name="personalizacion_experiencia" value="restricciones_alimentarias" >
-                            <label for="restricciones_alimentarias">Restricciones alimentarias</label><br>
+                                <input type="checkbox" id="restricciones_alimentarias" name="personalizacion_experiencia"
+                                    value="restricciones_alimentarias">
+                                <label for="restricciones_alimentarias">Restricciones alimentarias</label>
                             </div>
                             <div>
-                            <input type="radio" id="mesa_con_accesibilidad" name="personalizacion_experiencia" value="mesa_con_accesibilidad">
-                            <label for="mesa_con_accesibilidad">Mesa con accesibilidad</label><br>
+                                <input type="checkbox" id="mesa_con_accesibilidad" name="personalizacion_experiencia2"
+                                    value="mesa_con_accesibilidad">
+                                <label for="mesa_con_accesibilidad">Mesa con accesibilidad</label>
                             </div>
                             <div>
-                            <input type="radio" id="menores"  name="personalizacion_experiencia" value="menores">
-                            <label for="Menores">Menores</label><br>
-                        </div>
+                                <input type="checkbox" id="menores" name="personalizacion_experiencia3" value="menores">
+                                <label for="Menores">Menores</label>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="form_button">
-                    <input type="submit" value="Reserva" class="sendButton">
+                    <input type="submit" value="Reserva" class="send_button">
                 </div>
             </form>
         </div>
@@ -104,6 +117,7 @@
             <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </footer>
+</div>
     <script src="https://kit.fontawesome.com/0c9e4fcd31.js" crossorigin="anonymous"></script>
 </body>
 

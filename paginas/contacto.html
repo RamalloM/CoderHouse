@@ -2,7 +2,7 @@
   Arreglar text input
   corregir tamano del form
   Incorporar GRID de ser necesario
-  modificar br
+
 -->
 <!DOCTYPE html>
 
@@ -23,6 +23,7 @@
 </head>
 
 <body>
+  <div class="grid_container_menu">
   <header>
     <nav class="menuNav">
       <a href="../index.html">
@@ -43,12 +44,16 @@
         <form action="#" method="get" enctype="application/x-www-form-urlencoded" class="form_reserva">
           <div class="form_row">
             <div class="form_colum">
-              <div class="form_item">
-                <p>Datos personales</p>
+              <div>
+                <p>Datos personales:</p>
+              </div>
+              <div>
                 <input type="text" name="Nombre_completo" placeholder="Nombre" />
-                <br>
+              </div>
+              <div>
                 <input type="email" placeholder="Email" />
-                <br>
+              </div>
+                <div>
                 <input type="tel" placeholder="Telefono">
               </div>
             </div>
@@ -58,7 +63,7 @@
             </div>
           </div>
           <div class="form_button">
-            <input type="submit" value="Enviar" id="sendButton" class="sendButton">
+            <input type="submit" value="Enviar" id="sendButton" class="send_button">
           </div>
       </div>
       </form>
@@ -71,6 +76,7 @@
       <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
     </div>
   </footer>
+</div>
   <script src="https://kit.fontawesome.com/0c9e4fcd31.js" crossorigin="anonymous"></script>
 </body>
 
