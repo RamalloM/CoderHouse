@@ -28,13 +28,13 @@
         width: 100%;
         height: auto;
         background-color: white;
+        background-position: center center;
     }
 
     /* HEADER */
 
 
     .menuNav {
-        /*Modifica al elemento a y ul*/
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -44,7 +44,6 @@
         opacity: 0.6;
         padding: 0rem 0rem 0rem 2rem;
         min-height: 7rem;
-
     }
 
     .menuNav__logo {
@@ -56,7 +55,7 @@
         height: 5rem;
     }
 
-    .menuNav__logo:hover{
+    .menuNav__logo:hover {
         transition: 00.5s;
         width: 8rem;
         height: 8rem;
@@ -80,19 +79,15 @@
         visibility: hidden;
     }
 
-    .aNav{
+    .aNav {
         font-size: 2rem;
 
         transition: 0.5s;
-     }
+    }
 
-    .aNav:hover{
+    .aNav:hover {
         font-size: 150%;
     }
-    /* .menuUl li:hover, li:active {
-        background-color: #e8dada;
-    }*/
-
 
 
     /* BODY */
@@ -101,9 +96,6 @@
         min-height: 100%;
     }
 
-    .flex {
-        display: flex;
-    }
 
     .template {
 
@@ -113,6 +105,7 @@
         background-color: rgb(245, 245, 245, 0.6);
     }
 
+    /*MAIN*/
 
     .frontitle {
 
@@ -126,6 +119,7 @@
 
     }
 
+
     .menu__title {
         display: flex;
         justify-content: center;
@@ -134,10 +128,37 @@
         margin-top: 2rem;
     }
 
+    .menu_item {
+        font-size: 5rem;
+    }
+
+    .menu_list {
+        font-size: 3rem;
+    }
+
+    .menu_descripcion {
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+
+    .flex_container_menu {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        ;
+    }
+
+
     .reserva {
         width: 60rem;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .form_reserva {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .contacto {
@@ -146,12 +167,6 @@
         margin-right: auto;
         margin-left: auto;
         margin-top: 5%;
-    }
-
-    .form_reserva {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
     }
 
     .form_item {
@@ -185,20 +200,18 @@
         width: 20rem;
     }
 
+    .text_input {
+        display: flex;
+        height: 10rem;
+        width: auto;
+    }
+
     .form_button {
         display: flex;
         justify-content: right;
         margin-right: 2rem;
         flex-direction: row;
         margin-top: 1rem;
-    }
-
-    
-
-    .text_input {
-        display: flex;
-        height: 10rem;
-        width: auto;
     }
 
     .send_button {
@@ -214,15 +227,13 @@
         transition: 0.5s;
     }
 
-    .send_button:hover{
+    .send_button:hover {
         width: 9rem;
         height: 6rem;
         font-size: 110%;
     }
 
     /* FOOTER */
-
-
 
     .redes a i {
         font-size: 2rem;
@@ -231,26 +242,20 @@
 
 
 
-    /*MENU*/
 
-    .menu_item {
-        font-size: 5rem;
-    }
 
-    .menu_list {
-        font-size: 3rem;
-    }
-
-    .menu_descripcion {
-        font-size: 2rem;
-        margin-left: 3rem;
-    }
-
-    .flex_container_menu {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        ;
+    /*GRID*/
+    .grid_container1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 15% 1fr 10%;
+        grid-template-areas:
+            header header header
+            main main main
+            footer footer footer;
+        align-content: space-between;
+        row-gap: 2rem;
+        height: 100vh;
     }
 
     .grid_container_menu {
@@ -262,37 +267,27 @@
             'header'
             'main'
             'footer';
-    }
-
-    /*GRID*/
-    .grid_container1 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 15% 1fr 10%;
-        grid-template-areas:
-            'header header header'
-            'main main main'
-            'footer footer footer';
-        align-content: space-between;
-        row-gap: 2rem;
-        height: 100vh;
+        align-content: space-around;
     }
 
     header {
-        grid-area: 'header';
+        grid-area: header;
         grid-column: 1/4;
-        grid-row: 1/2
+        grid-row: 1/2;
+        min-width: 100vh;
     }
 
     main {
-        grid-area: 'main';
+        grid-area: main;
         grid-column: 1/4;
         grid-row: 2/5;
+        min-height: 100vh;
+        min-width: 100vh;
 
     }
 
     footer {
-        grid-area: 'footer';
+        grid-area: footer;
         display: flex;
         grid-column: 1/4;
         grid-row: 5/6;
@@ -303,5 +298,82 @@
         background-color: whitesmoke;
         opacity: 0.6;
         bottom: 0;
-        margin-top: 4rem;
+    }
+
+    /*MEDIA QUERIS*/
+    /*Mobile*/
+
+    @media screen and (max-width: 426px) {
+        .grid_container1 {
+            grid-template-columns: 100%;
+            grid-template-areas:
+                'main main main'
+                'header header header'
+                'footer footer footer';
+            height: auto;
+            row-gap: none;
+        }
+
+        .menuNav {
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+        }
+
+        .menuUl {
+            display: flex;
+            flex-direction: column;
+            min-height: fit-content;
+
+        }
+
+        .menuUl li {
+            padding: 4rem;
+        }
+
+        .menuUl__hiddenObj {
+            display: none;
+        }
+
+        .menuNav__logo {
+            display: none;
+
+        }
+
+        .reserva {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .form_row {
+            flex-direction: column;
+        }
+
+        .form_colum_1 {
+            margin: 0;
+
+        }
+
+        .form_button {
+            justify-content: start;
+            margin right: 0;
+        }
+
+        header {
+            grid-area: header;
+            margin: 0;
+        }
+
+        main {
+            grid-area: main;
+            width: 100%;
+            margin: 0;
+        }
+
+        footer {
+            grid-area: footer;
+            width: 100vh;
+            margin-top: none;
+        }
     }
