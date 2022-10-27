@@ -277,9 +277,10 @@
             "footer footer footer";
         align-content: space-between;
           height: 100vh;
+          row-gap: 2%;
     }
 
-
+/* GRID DE EJEMPLO
     .container {  display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
@@ -289,7 +290,7 @@
           ". . ."
           ". . ."
           ". . .";
-      }
+      }*/
       
     .grid_container_menu {
         display: grid;
@@ -301,6 +302,7 @@
             "footer";
         grid-auto-flow: row;
         align-content: space-around;
+        row-gap: 2%;
     }
 
     header {
