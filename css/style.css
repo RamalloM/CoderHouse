@@ -257,8 +257,8 @@
     /* FOOTER */
 
     .redes a i {
-        font-size: 2rem;
-        padding-left: 1rem;
+        font-size: 3rem;
+        padding-left: 3rem;
     }
 
 
@@ -270,52 +270,29 @@
     .grid_container1 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 15% 1fr 10%;
+        grid-template-rows: 10rem 1fr 6rem;
         grid-template-areas:
             "header header header"
             "main main main"
             "footer footer footer";
         align-content: space-between;
-          height: 100vh;
-          row-gap: 2%;
-    }
-
-/* GRID DE EJEMPLO
-    .container {  display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 0px 0px;
         grid-auto-flow: row;
-        grid-template-areas:
-          ". . ."
-          ". . ."
-          ". . .";
-      }*/
-      
-    .grid_container_menu {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 10% 1fr 5%;
-          grid-template-areas:
-            "header"
-            "main"
-            "footer";
-        grid-auto-flow: row;
-        align-content: space-around;
         row-gap: 2%;
     }
+
 
     header {
         grid-area: header;
         grid-column: 1/4;
         grid-row: 1/2;
         min-width: 100vh;
+        min height: 10rem;
     }
 
     main {
         grid-area: main;
         grid-column: 1/4;
-        grid-row: 2/5;
+        grid-row: 2/3;
         min-height: 100vh;
         min-width: 100vh;
 
@@ -325,7 +302,7 @@
         grid-area: footer;
         display: flex;
         grid-column: 1/4;
-        grid-row: 5/6;
+        grid-row: 3/4;
         color: azure;
         justify-content: right;
         align-items: center;
@@ -333,6 +310,7 @@
         background-color: whitesmoke;
         opacity: 0.6;
         bottom: 0;
+        margin-top: 2rem;
     }
 
 
@@ -381,6 +359,7 @@
     @media screen and (max-width: 426px) {
         .grid_container1 {
             grid-template-columns: 100%;
+            grid-template-rows: 10rem 1fr 6rem;
             grid-template-areas:
                 'main main main'
                 'header header header'
