@@ -138,7 +138,7 @@
         background-color: whitesmoke;
         opacity: 0.6;
         position: relative;
-
+        
     }
 
 
@@ -343,7 +343,10 @@
 
     .menuNav input:checked~nav {
         display: block;
+       
+        opacity: 1;
     }
+    
 
     .menuNav input:checked~.fa-bars {
         display: none;
@@ -358,14 +361,20 @@
 
     @media screen and (max-width: 426px) {
         .grid_container1 {
-            grid-template-columns: 100%;
+            grid-template-columns: 50%;
             grid-template-rows: 10rem 1fr 6rem;
             grid-template-areas:
-                'main main main'
-                'header header header'
-                'footer footer footer';
+                'main '
+                'header'
+                'footer ';
             height: auto;
             row-gap: none;
+            
+        }
+        .menuNav{
+            position: relative;
+            opacity: 1;
+            background-color: #f5f5f5b9
         }
 
         .menuNav_index {
@@ -378,22 +387,26 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            background-color: #f5f5f5b9;
         }
 
         .menuNav i,
         .menuNav input {
             visibility: visible;
+            
         }
 
         .menuUl {
             display: flex;
             flex-direction: column;
             min-height: fit-content;
-
+            background-color: #f5f5f5b9;
+          
         }
 
         .menuUl li {
             padding: 4rem;
+            opacity: 1;
         }
 
         .menuUl__hiddenObj {
@@ -428,18 +441,25 @@
         header {
             grid-area: header;
             margin: 0;
+            grid-row: 1/2;
+            z-index: 2;
+
         }
 
         main {
             grid-area: main;
             width: 100%;
             margin: 0;
+            grid-column: 1/2;
+            grid-row: 2/3;
         }
 
         footer {
             grid-area: footer;
             width: 100vh;
             margin-top: none;
+            grid-row: 3/4;
+            grid-column: 1/2;
         }
 
 
@@ -451,5 +471,21 @@
 
         .menuNav nav {
             display: none;
+            margin: 0;
+    
+            background-color: #f5f5f5b9;
+            background:fixed;
+        }
+
+        .menuNav .fa-bars,
+        .menuNav .fa-times {
+            font-size: 48px;
+            pointer-events: none;
+            visibility: visible;
+            
+        }
+
+        .menuNav input:checked~nav {
+            background-color: #66ae00;
         }
     }

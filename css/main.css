@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: "Aref Ruqaa Ink", serif;
+  font-size: 62.5%; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+ul {
+  list-style: none; }
+
+.menuNav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5;
+  opacity: 0.6;
+  padding: 0rem 0rem 0rem 2rem;
+  min-height: 7rem; }
+  .menuNav i, .menuNav input {
+    visibility: hidden; }
+
+.menuNav_bar {
+  display: flex;
+  align-items: center;
+  margin: auto; }
+
+.menuNav__logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  width: 5rem;
+  height: 5rem; }
+  .menuNav__logo:hover {
+    transition: 00.5s;
+    width: 8rem;
+    height: 8rem; }
+
+.menuUl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto; }
+  .menuUl li {
+    padding: 2rem;
+    font-size: 2rem; }
