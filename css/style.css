@@ -41,26 +41,14 @@
         align-items: center;
         background-color: #f5f5f5;
         opacity: 0.6;
-        padding: 0rem 0rem 0rem 2rem;
         min-height: 7rem;
     }
 
-    .menuNav i,
-    .menuNav input {
+    .menuNav i {
         visibility: hidden;
     }
 
-    .menuNav_index {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #f5f5f5;
-        opacity: 0.6;
-        padding: 0rem 0rem 0rem 2rem;
-        min-height: 7rem;
-    }
+
     .menuNav input,
     .menuNav .fa-bars,
     .menuNav .fa-times {
@@ -87,22 +75,21 @@
 
     .menuNav input:checked~nav {
         display: block;
-       
         opacity: 1;
     }
-    
 
-    .menuNav input:checked~.fa-bars{
+
+    .menuNav input:checked~.fa-bars {
         display: none;
     }
-    
+
 
     .menuNav input:not(:checked)~.fa-times {
         display: none;
     }
+
+
     .menuNav_bar {
-        display: flex;
-        align-items: center;
         margin: auto;
     }
 
@@ -110,9 +97,10 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        padding: 10px;
+        padding: 1rem;
         width: 5rem;
         height: 5rem;
+        margin-left: 2rem;
     }
 
     .menuNav__logo:hover {
@@ -127,7 +115,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin: auto;
     }
 
     .menuUl li {
@@ -135,13 +122,9 @@
         font-size: 2rem;
     }
 
-    .menuUl__hiddenObj {
-        visibility: hidden;
-    }
+
 
     .aNav {
-        font-size: 2rem;
-
         transition: 0.5s;
     }
 
@@ -150,22 +133,28 @@
     }
 
 
+
     /* BODY */
 
     body {
-        min-height: 100%;
+        min-height: 100vh;
     }
 
 
-    .template {
-
-        font-size: 2rem;
-        margin: 2rem;
-        padding: 2rem 0rem 2rem 2rem;
-        background-color: #f5f5f599;
-    }
 
     /*MAIN*/
+
+    .template {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        font-size: 2rem;
+        margin: 0 2rem;
+        padding: 2rem 0 2rem 2rem;
+        background-color: #f5f5f599;
+
+    }
 
     .frontitle {
         display: flex;
@@ -176,18 +165,25 @@
         background-color: whitesmoke;
         opacity: 0.6;
         position: relative;
-     
+
     }
+
 
 
     .menu__title {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         font-size: 5rem;
-        margin-top: 2rem;
-    }
 
+    }
+ .menu_ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+ }
     .menu_item {
         font-size: 5rem;
     }
@@ -201,17 +197,11 @@
         margin-left: 3rem;
     }
 
-    .flex_container_menu {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-    }
 
 
     .reserva {
         width: 60rem;
-        margin-right: auto;
-        margin-left: auto;
+        margin: 0 auto;
     }
 
     .form_reserva {
@@ -221,18 +211,11 @@
     }
 
     .contacto {
-        height: auto;
         width: 80rem;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 5%;
+        margin: 0 auto;
     }
 
-    .form_item {
-        padding: 0.5rem;
-        margin-bottom: 0rem;
-        width: auto;
-    }
+    
 
     .form_row {
         display: flex;
@@ -243,8 +226,8 @@
     .form_colum {
         display: flex;
         flex-direction: column;
-        
-        align-content: space-between;
+        justify-content: space-between;
+        align-content: space-around;
     }
 
     .form_colum_1 {
@@ -252,13 +235,11 @@
         flex-direction: column;
         margin-right: 5rem;
         width: 50%;
+        justify-content: space-between;
         align-content: space-around;
     }
 
-    .form_select {
-        width: 20rem;
-    }
-
+    
     .text_input {
         display: flex;
         height: 10rem;
@@ -267,11 +248,11 @@
 
     .form_button {
         display: flex;
-        justify-content: right;
-        margin-right: 2rem;
         flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 2rem;
         margin-top: 1rem;
-        
+
     }
 
     .send_button {
@@ -279,7 +260,7 @@
         font-size: medium;
         background-color: green;
         border-radius: 1.2rem;
-        border: #f5f5f5;
+        border: hidden;
         align-items: center;
         width: 8rem;
         height: 5rem;
@@ -295,7 +276,7 @@
 
     /* FOOTER */
 
-    footer  i {
+    footer i {
         font-size: 3rem;
         padding-left: 3rem;
     }
@@ -314,13 +295,12 @@
         row-gap: 2%;
     }
 
-
     header {
         grid-area: header;
         grid-column: 1/4;
         grid-row: 1/2;
         min-width: 100vh;
-        min-height: 10rem;
+        
     }
 
     main {
@@ -328,8 +308,7 @@
         grid-column: 1/4;
         grid-row: 2/3;
         min-height: 100vh;
-        min-width: 100vh;
-
+        min-width: 100vh
     }
 
     footer {
@@ -338,9 +317,9 @@
         grid-column: 1/4;
         grid-row: 3/4;
         color: azure;
-        justify-content: right;
+        justify-content:flex-end;
         align-items: center;
-        width: 100%;
+        min-width: 100vh;
         background-color: whitesmoke;
         opacity: 0.6;
         bottom: 0;
@@ -351,36 +330,24 @@
 
 
 
-  
-    .grid_container1 {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 10rem 1fr 6rem;
-        grid-template-areas:
-            "header header header"
-            "main main main"
-            "footer footer footer";
-        align-content: space-between;
-        grid-auto-flow: row;
-        row-gap: 2%;
-    }
+
+
     /*MEDIA QUERIS*/
     /*Mobile*/
 
     @media screen and (max-width: 426px) {
         .grid_container1 {
-            grid-template-columns: 425px;
-            grid-template-rows: 15% 1fr 10%;
+            grid-template-columns: 1fr;
+            grid-template-rows: 5rem 1fr 10%;
             grid-template-areas:
-               "header"
-               "main"
-               "footer";
+                "header"
+                "main"
+                "footer";
             height: auto;
-            row-gap: none;
-            width: 100vh;
-            
-        }
-        .menuNav{
+            row-gap: 2rem;
+                    }
+
+        .menuNav {
             position: relative;
             opacity: 1;
             background-color: #f5f5f5b9
@@ -402,7 +369,7 @@
         .menuNav i,
         .menuNav input {
             visibility: visible;
-            
+
         }
 
         .menuUl {
@@ -410,7 +377,7 @@
             flex-direction: column;
             min-height: fit-content;
             background-color: #f5f5f5b9;
-          
+
         }
 
         .menuUl li {
@@ -427,10 +394,15 @@
 
         }
 
+        .template {
+            margin: 0;
+            padding: 0;
+        }
+
         .reserva {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: 100vh;
         }
 
         .form_row {
@@ -443,19 +415,21 @@
         }
 
         .form_button {
-            justify-content: start;
+            justify-content: flex-end;
             margin right: 0;
         }
-   
+
         header {
             grid-area: header;
             grid-column: 1/2;
             grid-row: 1/2;
-             margin: 0;
-             z-index: 2;   
+            margin: 0;
+            z-index: 2;
+            min-height: fit-content;
         }
 
         main {
+
             grid-area: main;
             grid-column: 1/2;
             grid-row: 2/3;
@@ -467,6 +441,8 @@
             grid-column: 1/2;
             grid-row: 3/4;
             margin-top: none;
+            bottom: 0;
+            
         }
 
 
@@ -479,9 +455,9 @@
         .menuNav nav {
             display: none;
             margin: 0;
-    
+
             background-color: #f5f5f5b9;
-            background:fixed;
+            background: fixed;
         }
 
         .menuNav .fa-bars,
@@ -489,10 +465,23 @@
             font-size: 48px;
             pointer-events: none;
             visibility: visible;
-            
+
         }
 
         .menuNav input:checked~nav {
-             background-color: #66ae00;
+            background-color: #66ae00;
+            opacity: 1;
         }
+
+        footer i {
+            font-size: 4rem;
+        }
+        .contacto{
+            width: 100vh;
+        }
+        .menuNav .fa-bars,
+    .menuNav .fa-times {
+        font-size: 4rem;
+        pointer-events: none;
+    }
     }
